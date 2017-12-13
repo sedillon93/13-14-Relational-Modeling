@@ -1,0 +1,11 @@
+{
+  "name": "lab-shannon",
+  "version": "1.0.0",
+  "description": "Building a server with a new type of item",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shannon",
+  "license": "MIT"
+}
