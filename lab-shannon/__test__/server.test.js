@@ -29,7 +29,7 @@ describe(`/api/restaurants`, () => {
 
   describe(`POST request`, () => {
     test(`POST request should respond with a 200 status if there were no errors`, () => {
-      return superagent.post(`${apiURL}`)
+      return superagent.post(apiURL)
         .send({name: 'Bukhara', cuisine: 'indian', city: 'Issaquah', rating: 5})
         .then(response => {
           // console.log(response, `is the 200 POST request`);
@@ -39,22 +39,26 @@ describe(`/api/restaurants`, () => {
         .catch(`Oh noes! There was a problem with your POST request`);
     });
     test(`POST request should respond with a 400 status if the body was missing information`, () => {
-      return superagent.post(`${apiURL}`)
+      return superagent.post(apiURL)
         .send({name: `Don't Eat Here`, cuisine: `italian`})
         .then(Promise.reject)
         .catch(response => {
           expect(response.status).toEqual(400);
         });
     });
-    // test(`POST should respond with a 409 status if a duplicate restaurant name is used`, () => {
-    //   return superagent.post(`${apiURL}`)
-    //     .send({name: 'Local Pho', cuisine: 'vietnamese', city: 'Seattle', rating: 4})
-    //     .send({name: 'Local Pho', cuisine: 'thai', city: 'Redmond', rating: 3})
-    //     .then(Promise.reject)
-    //     .catch(response => {
-    //       expect(response.status).toEqual(409);
-    //     });
-    // });
+    test(`POST should respond with a 409 status if a duplicate restaurant name is used`, () => {
+      let mockRestaurant;
+      return createFakeRestaurant()
+        .then(restaurant => {
+          mockRestaurant = restaurant
+          return superagent.post(apiURL)
+            .send({name: mockRestaurant.name, cuisine: mockRestaurant.cuisine, city: mockRestaurant.city, rating: mockRestaurant.rating})
+        })
+        .then(Promise.reject)
+        .catch(response => {
+          expect(response.status).toEqual(409);
+        });
+    });
   });
 
   describe(`GET request`, () => {
