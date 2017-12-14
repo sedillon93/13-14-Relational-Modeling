@@ -1,0 +1,6 @@
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T00:17:55.747Z"}
+{"level":"info","message":"Processing a POST request to the url /api/sweets","timestamp":"2017-12-14T00:17:55.775Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T00:17:55.789Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T00:20:17.708Z"}
+{"level":"info","message":"Processing a POST request to the url /api/sweets","timestamp":"2017-12-14T00:20:17.731Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T00:20:17.750Z"}

@@ -6,17 +6,18 @@ process.env.MONGODB_URI = `mongodb://localhost/db`;
 const faker = require(`faker`);
 const superagent = require(`superagent`);
 const server = require(`../lib/server`);
+const Restaurant = require(`../model/restaurant`);
 
 const apiURL = `http://localhost:${process.env.PORT}/api/sweets`;
 
 let cuisines = [`indian`, `italian`, `american`, `bangladeshi`, `french`, `thai`, `vietnamese`];
 let cities = [`Seattle`, `Bellevue`, `Redmond`, `Issaquah`, `Sammamish`, `Edmonds`, `Shoreline`];
 
-createFakeRestaurant = () => {
+let createFakeRestaurant = () => {
   return new Restaurant ({
-    name: faker.word(2);
-    cuisine: cuisines[faker.random.number(6)];
-    city: cities[faker.random.number(6)];
+    name: faker.word(2),
+    cuisine: cuisines[faker.random.number(6)],
+    city: cities[faker.random.number(6)],
   }).save();
 }
 
