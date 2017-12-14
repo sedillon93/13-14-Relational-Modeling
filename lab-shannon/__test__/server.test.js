@@ -42,5 +42,13 @@ describe(`/api/restaurants`, () => {
           console.log(error.message, `is the error message`);
         });
     });
+    test(`POST request should respond with a 400 status if the body was missing information`, () => {
+      return superagent.post(`${apiURL}`)
+        .send({name: `Don't Eat Here`, cuisine: `italian`})
+        .then(Promise.reject)
+        .catch(response => {
+          expect(response.status).toEqual(400);
+        });
+    });
   });
 });

@@ -37,3 +37,8 @@
 {"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T00:40:45.671Z"}
 {"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T00:40:45.696Z"}
 {"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T00:40:45.745Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T00:44:20.836Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T00:44:20.860Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T00:44:20.906Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T00:44:20.907Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T00:44:20.911Z"}
