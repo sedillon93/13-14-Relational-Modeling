@@ -100,15 +100,21 @@ describe(`/api/restaurants`, () => {
       return createFakeRestaurant()
         .then(restaurant => {
           restaurantToUpdate = restaurant;
-          console.log(restaurant, `is the test restaurant`);
           return superagent.put(`${apiURL}/${restaurant._id}`)
             .send({cuisine: 'italian'});
         })
         .then(response => {
-          console.log(response.body, `is the new restaurant`);
           expect(response.status).toEqual(200);
           expect(response.body.cuisine).toEqual(`italian`);
         })
+        .catch(`Oh noes, there was a problem with your PUT request.`)
+    });
+    test(`PUT should respond with a 404 if no restaurant is found with the id provided`, () => {
+      return superagent.put(`${apiURL}/notAnID`)
+        .then(Promise.reject)
+        .catch(response => {
+          expect(response.status).toEqual(404);
+        })
     })
-  })
+  });
 });
