@@ -36,7 +36,7 @@ server.start = () => {
       return resolve();
     });
   })
-  .then(mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true}));
+    .then(mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true}));
 };
 
 server.stop = () => {
@@ -56,5 +56,5 @@ server.stop = () => {
       return resolve();
     });
   })
-  .then(() => mongoose.disconnect());
+    .then(() => mongoose.disconnect());
 };

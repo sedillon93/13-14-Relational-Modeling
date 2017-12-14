@@ -8,7 +8,7 @@ const superagent = require(`superagent`);
 const server = require(`../lib/server`);
 const Restaurant = require(`../model/restaurant`);
 
-const apiURL = `http://localhost:${process.env.PORT}/api/sweets`;
+const apiURL = `http://localhost:${process.env.PORT}/api/restaurants`;
 
 let cuisines = [`indian`, `italian`, `american`, `bangladeshi`, `french`, `thai`, `vietnamese`];
 let cities = [`Seattle`, `Bellevue`, `Redmond`, `Issaquah`, `Sammamish`, `Edmonds`, `Shoreline`];
@@ -19,7 +19,7 @@ let createFakeRestaurant = () => {
     cuisine: cuisines[faker.random.number(6)],
     city: cities[faker.random.number(6)],
   }).save();
-}
+};
 
 describe(`/api/restaurants`, () => {
   beforeAll(server.start);
@@ -30,14 +30,17 @@ describe(`/api/restaurants`, () => {
     let fakeRestaurant = {
       name: 'Bukhara',
       cuisine: 'indian',
-      city: 'Issaquah'
+      city: 'Issaquah',
     };
     test(`POST request should respond with a 200 status if there were no errors`, () => {
-      return superagent.post(apiURL)
-      .send(fakeRestaurant)
-      .then(response => {
-        expect(response.status).toEqual(200);
-      })
+      return superagent.post(`${apiURL}`)
+        .send(fakeRestaurant)
+        .then(response => {
+          expect(response.status).toEqual(200);
+        })
+        .catch(error => {
+          console.log(error.message, `is the error message`);
+        });
     });
   });
-})
+});

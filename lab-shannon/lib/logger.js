@@ -8,7 +8,7 @@ const logger = new (winston.Logger)({
     new (winston.transports.File)({
       filename: 'log.json',
       levels: winstonLevels,
-      levels: 0,
+      level: 0,
     }),
   ],
 });

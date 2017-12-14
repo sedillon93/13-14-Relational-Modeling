@@ -4,3 +4,36 @@
 {"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T00:20:17.708Z"}
 {"level":"info","message":"Processing a POST request to the url /api/sweets","timestamp":"2017-12-14T00:20:17.731Z"}
 {"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T00:20:17.750Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T00:21:18.960Z"}
+{"level":"info","message":"Processing a POST request to the url /api/sweets","timestamp":"2017-12-14T00:21:18.988Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T00:21:19.011Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T00:23:51.464Z"}
+{"level":"info","message":"Processing a POST request to the url /api/sweets","timestamp":"2017-12-14T00:23:51.486Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T00:23:51.504Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T00:24:41.491Z"}
+{"level":"info","message":"Processing a POST request to the url /api/sweets","timestamp":"2017-12-14T00:24:41.514Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T00:24:41.542Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T00:29:50.921Z"}
+{"level":"info","message":"Processing a POST request to the url /api/sweets","timestamp":"2017-12-14T00:29:50.946Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T00:29:50.971Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T00:30:30.792Z"}
+{"level":"info","message":"Processing a POST request to the url /api/sweets","timestamp":"2017-12-14T00:30:30.814Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T00:30:30.832Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T00:31:05.174Z"}
+{"level":"info","message":"Processing a POST request to the url /api/sweets","timestamp":"2017-12-14T00:31:05.197Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T00:31:05.216Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T00:38:10.630Z"}
+{"level":"info","message":"Processing a POST request to the url /api/sweets","timestamp":"2017-12-14T00:38:10.652Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T00:38:10.670Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T00:39:40.555Z"}
+{"level":"info","message":"Processing a POST request to the url /api/sweets","timestamp":"2017-12-14T00:39:40.583Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T00:39:40.606Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T00:39:54.375Z"}
+{"level":"info","message":"Processing a POST request to the url /api/sweets","timestamp":"2017-12-14T00:39:54.398Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T00:39:54.416Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T00:40:34.300Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T00:40:34.325Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T00:40:34.374Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T00:40:45.671Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T00:40:45.696Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T00:40:45.745Z"}
