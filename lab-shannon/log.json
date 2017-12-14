@@ -42,3 +42,98 @@
 {"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T00:44:20.906Z"}
 {"level":"info","message":"Handling an error","timestamp":"2017-12-14T00:44:20.907Z"}
 {"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T00:44:20.911Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T00:56:25.550Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T00:56:25.574Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T00:56:25.617Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T00:56:25.617Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T00:56:25.620Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T01:00:41.244Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:00:41.271Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:00:41.315Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:00:41.316Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T01:00:41.319Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T01:01:03.785Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:01:03.813Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:01:03.855Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:01:03.856Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T01:01:03.862Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T01:01:23.351Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:01:23.376Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:01:23.416Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:01:23.417Z"}
+{"level":"info","message":"Processing a GET request to the url /api/restaurants","timestamp":"2017-12-14T01:01:23.424Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T01:01:23.429Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T01:01:36.812Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:01:36.835Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:01:36.880Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:01:36.881Z"}
+{"level":"info","message":"Processing a GET request to the url /api/restaurants","timestamp":"2017-12-14T01:01:36.886Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T01:01:36.890Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T01:02:59.309Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:02:59.333Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:02:59.377Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:02:59.378Z"}
+{"level":"info","message":"Processing a GET request to the url /api/restaurants/5a31cdc3c30a1207d48921fc","timestamp":"2017-12-14T01:02:59.384Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:02:59.384Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T01:02:59.387Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T01:04:57.986Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:04:58.010Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:04:58.053Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:04:58.054Z"}
+{"level":"info","message":"Processing a GET request to the url /api/restaurants/5a31ce3ae2246c07dae1e59b","timestamp":"2017-12-14T01:04:58.060Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:04:58.060Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T01:04:58.067Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T01:07:00.003Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:07:00.028Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:07:00.071Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:07:00.072Z"}
+{"level":"info","message":"Processing a GET request to the url /api/restaurants/5a31ceb4a27f7707e254f36b","timestamp":"2017-12-14T01:07:00.080Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:07:00.080Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T01:07:00.083Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T01:07:27.731Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:07:27.754Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:07:27.796Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:07:27.797Z"}
+{"level":"info","message":"Processing a GET request to the url /api/restaurants/5a31cecf241e4207eb88cf73","timestamp":"2017-12-14T01:07:27.804Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:07:27.804Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T01:07:27.807Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T01:08:14.387Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:08:14.413Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:08:14.460Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:08:14.461Z"}
+{"level":"info","message":"Processing a GET request to the url /api/restaurants/5a31cefe21048e07f38b1dea","timestamp":"2017-12-14T01:08:14.467Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:08:14.468Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T01:08:14.471Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T01:08:30.783Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:08:30.811Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:08:30.860Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:08:30.862Z"}
+{"level":"info","message":"Processing a GET request to the url /api/restaurants/5a31cf0e2bf99607fa4e4e2a","timestamp":"2017-12-14T01:08:30.870Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:08:30.871Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T01:08:30.874Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T01:08:43.680Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:08:43.706Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:08:43.754Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:08:43.755Z"}
+{"level":"info","message":"Processing a GET request to the url /api/restaurants/5a31cf1b5a4c280801073b1e","timestamp":"2017-12-14T01:08:43.761Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:08:43.761Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T01:08:43.765Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T01:09:20.044Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:09:20.068Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:09:20.113Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:09:20.114Z"}
+{"level":"info","message":"Processing a GET request to the url /api/restaurants/5a31cf408d18950808437bf1","timestamp":"2017-12-14T01:09:20.120Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:09:20.121Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T01:09:20.124Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T01:09:42.103Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:09:42.127Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:09:42.169Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:09:42.170Z"}
+{"level":"info","message":"Processing a GET request to the url /api/restaurants/5a31cf560e86f808110c91a2","timestamp":"2017-12-14T01:09:42.176Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T01:09:42.194Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T01:10:09.811Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:10:09.837Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:10:09.887Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:10:09.888Z"}
+{"level":"info","message":"Processing a GET request to the url /api/restaurants/5a31cf718945e9081877c753","timestamp":"2017-12-14T01:10:09.896Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T01:10:09.913Z"}

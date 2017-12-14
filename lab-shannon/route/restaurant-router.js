@@ -18,3 +18,14 @@ restaurantRouter.post('/api/restaurants', jsonParser, (request, response, next) 
     .then(restaurant => response.json(restaurant))
     .catch(next);
 });
+
+restaurantRouter.get(`/api/restaurants/:id`, (request, response, next) => {
+  return Restaurant.findById(request.params.id)
+    .then(restaurant => {
+      if(!restaurant){
+        throw httpErrors(404, `Sending a 404 because no restaurant was found with that id`);
+      }
+      return response.json(restaurant);
+    })
+    .catch(next);
+});

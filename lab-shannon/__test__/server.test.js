@@ -15,7 +15,7 @@ let cities = [`Seattle`, `Bellevue`, `Redmond`, `Issaquah`, `Sammamish`, `Edmond
 
 let createFakeRestaurant = () => {
   return new Restaurant ({
-    name: faker.word(2),
+    name: faker.lorem.word(2),
     cuisine: cuisines[faker.random.number(6)],
     city: cities[faker.random.number(6)],
   }).save();
@@ -38,9 +38,7 @@ describe(`/api/restaurants`, () => {
         .then(response => {
           expect(response.status).toEqual(200);
         })
-        .catch(error => {
-          console.log(error.message, `is the error message`);
-        });
+        .catch(`Oh noes! There was a problem with your POST request`);
     });
     test(`POST request should respond with a 400 status if the body was missing information`, () => {
       return superagent.post(`${apiURL}`)
@@ -49,6 +47,23 @@ describe(`/api/restaurants`, () => {
         .catch(response => {
           expect(response.status).toEqual(400);
         });
+    });
+  });
+
+  describe(`GET request`, () => {
+    test(`GET should respond with a 200 status if there were no errors`, () => {
+      let testRestaurant = null;
+
+      return createFakeRestaurant()
+        .then(restaurant => {
+          testRestaurant = restaurant;
+          return superagent.get(`${apiURL}/${restaurant._id}`)
+        })
+        .then(response => {
+          console.log(response.body, `response body`);
+          expect(response.status).toEqual(200);
+        })
+        .catch(`Oh noes, there was a problem with your GET request.`);
     });
   });
 });
