@@ -5,13 +5,13 @@ The purpose of this program is to provide a RESTful API which utilizes MongoDB, 
 * First install the dependencies by running 'npm install'.
 * Run the command 'npm run dbon' to connect to the database and establish a connection.
 * IN A DIFFERENT TAB of the terminal install jest for testing by running "npm i -s jest". You will then be able to use the command 'npm test' to execute all tests in the test files.
-* Each restaurant document requires four properties: A name, cuisine, city, and rating.
+* Each restaurant document requires four properties: A name (String), cuisine (String), city (String), and rating (Number).
 
 ## Request Endpoints
-POST: Post requests are handled by the route '/api/restaurants'. A successful post request will return a 200 status. If part of the required content is missing (name, cuisine, or city) a 400 status will be returned.
-PUT: Put requests are handled by the route '/api/restaurants/:id'.
-GET: Get requests are handled by the route '/api/restaurants/:id'.
-DELETE: Delete requests are handled by the route '/api/restaurants/:id'.
+POST: Post requests are handled by the route '/api/restaurants'. A successful post request will return a 200 status. If part of the required content is missing (name, cuisine, or city) a 400 error will be occur. If a restaurant with the specified name already exists a 409 error will occur.
+PUT: Put requests are handled by the route '/api/restaurants/:id'. Successful put request will return a 200 status. If no information was provided in the body a 400 error will occur. If no restaurant can be found with the id provided a 404 error will occur.
+GET: Get requests are handled by the route '/api/restaurants/:id'. A successful get request will return a 200 status. If no restaurant can be found which matches the id provided a 404 error will occur.
+DELETE: Delete requests are handled by the route '/api/restaurants/:id'. A successful delete request will return a 204 status. If no restaurant can be found which matches the id provided a 404 error will occur
 
 ## Technologies
 * ES6
