@@ -109,11 +109,29 @@ describe(`/api/restaurants`, () => {
         })
         .catch(`Oh noes, there was a problem with your PUT request.`)
     });
-    test(`PUT should respond with a 404 if no restaurant is found with the id provided`, () => {
-      return superagent.put(`${apiURL}/notAnID`)
+    test(`PUT should respond with a 404 status if no restaurant is found with the id provided`, () => {
+      return createFakeRestaurant()
+        .then(restaurant => {
+        return superagent.put(`${apiURL}/notAnID`)
+          .send({name: 'That Italian place'});
+      })
         .then(Promise.reject)
         .catch(response => {
           expect(response.status).toEqual(404);
+        });
+    });
+    test(`PUT should respond with a 400 status if there is no request body sent`, () => {
+      let restaurantToUpdate = null;
+
+      return createFakeRestaurant()
+        .then(restaurant => {
+          restaurantToUpdate = restaurant;
+          return superagent.put(`${apiURL}/${restaurant._id}`)
+            .send({});
+        })
+        .then(Promise.reject)
+        .catch(response => {
+          expect(response.status).toEqual(400);
         })
     })
   });

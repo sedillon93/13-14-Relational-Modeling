@@ -41,10 +41,10 @@ restaurantRouter.delete(`/api/restaurants/:id`, (request, response, next) => {
 });
 
 restaurantRouter.put(`/api/restaurants/:id`, jsonParser, (request, response, next) => {
-
+// why is this necessary? what do the options accomplish?
 let options = {runValidators: true, new: true};
 
-  if(!request.body){
+  if(!request.body.name && !request.body.cuisine && !request.body.city){
     return  next(httpErrors(400), `Sending a 400 status because request must include a body`);
   }
 
