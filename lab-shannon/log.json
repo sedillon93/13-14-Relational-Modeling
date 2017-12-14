@@ -176,3 +176,14 @@
 {"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:21:19.495Z"}
 {"level":"info","message":"Processing a DELETE request to the url /api/restaurants/5a31d20f8a38a6086c190e50","timestamp":"2017-12-14T01:21:19.500Z"}
 {"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T01:21:19.505Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T01:23:02.324Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:23:02.347Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T01:23:02.391Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:23:02.392Z"}
+{"level":"info","message":"Processing a GET request to the url /api/restaurants/5a31d276e18b6b087d3b301d","timestamp":"2017-12-14T01:23:02.398Z"}
+{"level":"info","message":"Processing a GET request to the url /api/restaurants/theBadPlace","timestamp":"2017-12-14T01:23:02.406Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:23:02.408Z"}
+{"level":"info","message":"Processing a DELETE request to the url /api/restaurants/5a31d276e18b6b087d3b301e","timestamp":"2017-12-14T01:23:02.412Z"}
+{"level":"info","message":"Processing a DELETE request to the url /api/restaurants/notReal","timestamp":"2017-12-14T01:23:02.419Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T01:23:02.419Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T01:23:02.421Z"}

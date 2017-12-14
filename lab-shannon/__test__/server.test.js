@@ -84,5 +84,12 @@ describe(`/api/restaurants`, () => {
         })
         .catch(`Oh noes, there was a problem with your DELETE request.`)
     });
+    test(`DELETE should respond with a 404 status if no restaurant was found with the id provided`, () => {
+      return superagent.delete(`${apiURL}/notReal`)
+        .then(Promise.reject)
+        .catch(response => {
+          expect(response.status).toEqual(404);
+        });
+    });
   });
 });
