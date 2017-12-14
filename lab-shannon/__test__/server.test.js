@@ -57,7 +57,7 @@ describe(`/api/restaurants`, () => {
       return createFakeRestaurant()
         .then(restaurant => {
           testRestaurant = restaurant;
-          return superagent.get(`${apiURL}/${restaurant._id}`)
+          return superagent.get(`${apiURL}/${restaurant._id}`);
         })
         .then(response => {
           expect(response.status).toEqual(200);
@@ -69,7 +69,20 @@ describe(`/api/restaurants`, () => {
         .then(Promise.reject)
         .catch(response => {
           expect(response.status).toEqual(404);
+        });
+    });
+  });
+
+  describe(`DELETE request`, () => {
+    test(`DELETE should respond with a 204 status if there were no errors`, () => {
+      return createFakeRestaurant()
+        .then(restaurant => {
+          return superagent.delete(`${apiURL}/${restaurant.id}`);
         })
-    })
+        .then(response => {
+          expect(response.status).toEqual(204);
+        })
+        .catch(`Oh noes, there was a problem with your DELETE request.`)
+    });
   });
 });
