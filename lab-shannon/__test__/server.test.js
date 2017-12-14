@@ -18,6 +18,7 @@ let createFakeRestaurant = () => {
     name: faker.lorem.word(2),
     cuisine: cuisines[faker.random.number(6)],
     city: cities[faker.random.number(6)],
+    rating: faker.random.number(5),
   }).save();
 };
 
@@ -27,15 +28,12 @@ describe(`/api/restaurants`, () => {
   afterEach(() => Restaurant.remove({}));
 
   describe(`POST request`, () => {
-    let fakeRestaurant = {
-      name: 'Bukhara',
-      cuisine: 'indian',
-      city: 'Issaquah',
-    };
     test(`POST request should respond with a 200 status if there were no errors`, () => {
       return superagent.post(`${apiURL}`)
-        .send(fakeRestaurant)
+        .send({name: 'Bukhara', cuisine: 'indian', city: 'Issaquah', rating: 5})
         .then(response => {
+          // console.log(response, `is the 200 POST request`);
+          // console.log(response.status, `is the status`);
           expect(response.status).toEqual(200);
         })
         .catch(`Oh noes! There was a problem with your POST request`);
@@ -46,6 +44,15 @@ describe(`/api/restaurants`, () => {
         .then(Promise.reject)
         .catch(response => {
           expect(response.status).toEqual(400);
+        });
+    });
+    test(`POST should respond with a 409 status if a duplicate restaurant name is used`, () => {
+      return superagent.post(`${apiURL}`)
+        .send({name: 'Local Pho', cuisine: 'vietnamese', city: 'Seattle', rating: 4})
+        .send({name: 'Local Pho', cuisine: 'thai', city: 'Redmond', rating: 3})
+        .then(Promise.reject)
+        .catch(response => {
+          expect(response.status).toEqual(409);
         });
     });
   });

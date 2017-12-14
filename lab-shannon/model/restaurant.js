@@ -18,6 +18,11 @@ const restaurantSchema = mongoose.Schema({
     required: true,
     unique: false,
   },
+  rating: {
+    type: Number,
+    required: true,
+    unique: false,
+  },
 });
 
 module.exports = mongoose.model(`restaurant`, restaurantSchema);
