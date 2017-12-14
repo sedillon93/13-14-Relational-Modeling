@@ -41,10 +41,17 @@ restaurantRouter.delete(`/api/restaurants/:id`, (request, response, next) => {
 });
 
 restaurantRouter.put(`/api/restaurants/:id`, jsonParser, (request, response, next) => {
-  return Restaurant.findByIdAndUpdate(request.params.id, request.body)
+
+let options = {runValidators: true, new: true};
+
+  if(!request.body){
+    return  next(httpErrors(400), `Sending a 400 status because request must include a body`);
+  }
+
+  return Restaurant.findByIdAndUpdate(request.params.id, request.body, options)
     .then(restaurant => {
       if(!restaurant){
-        throw httpErrors(404, `Sending a 404 because restaurant with that id does not exist to update`);
+        throw httpErrors(404, `Sending a 404 status because restaurant with that id does not exist to update`);
       }
       return response.json(restaurant);
     })

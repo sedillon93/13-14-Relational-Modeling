@@ -95,19 +95,21 @@ describe(`/api/restaurants`, () => {
 
   describe(`PUT request`, () => {
     test(`PUT should respond with 200 status if there were no errors`, () => {
-      let testRestaurant = null;
+      let restaurantToUpdate = null;
 
       return createFakeRestaurant()
         .then(restaurant => {
-          testRestaurant = restaurant;
-          return superagent.put(`${apiURL}/${restaurant.id}`)
-            .send({cuisine: 'italian'})
+          restaurantToUpdate = restaurant;
+          console.log(restaurant, `is the test restaurant`);
+          return superagent.put(`${apiURL}/${restaurant._id}`)
+            .send({cuisine: 'italian'});
         })
         .then(response => {
+          console.log(response.body, `is the new restaurant`);
           expect(response.status).toEqual(200);
-          // expect(response.body.cuisine).toEqual(`italian`);
-          // expect(response.body.name).toEqual(testRestaurant.body.name);
-          // expect(response.body.id).toEqual(testRestaurant._id.toString());
+          expect(response.body.cuisine).toEqual(`italian`);
+          expect(response.body.name).toEqual(restaurantToUpdate.body.name);
+          expect(response.body.id).toEqual(restaurantToUpdate._id.toString());
         })
     })
   })
