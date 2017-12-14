@@ -60,10 +60,16 @@ describe(`/api/restaurants`, () => {
           return superagent.get(`${apiURL}/${restaurant._id}`)
         })
         .then(response => {
-          console.log(response.body, `response body`);
           expect(response.status).toEqual(200);
         })
         .catch(`Oh noes, there was a problem with your GET request.`);
     });
+    test(`GET should respond with a 404 status if the id provided doesn't match anything`, () => {
+      return superagent.get(`${apiURL}/theBadPlace`)
+        .then(Promise.reject)
+        .catch(response => {
+          expect(response.status).toEqual(404);
+        })
+    })
   });
 });
