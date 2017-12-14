@@ -108,8 +108,6 @@ describe(`/api/restaurants`, () => {
           console.log(response.body, `is the new restaurant`);
           expect(response.status).toEqual(200);
           expect(response.body.cuisine).toEqual(`italian`);
-          expect(response.body.name).toEqual(restaurantToUpdate.body.name);
-          expect(response.body.id).toEqual(restaurantToUpdate._id.toString());
         })
     })
   })
