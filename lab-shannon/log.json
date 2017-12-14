@@ -1085,3 +1085,36 @@
 {"level":"info","message":"Processing a PUT request to the url /api/restaurants/5a3210787f2f470bd70c699f","timestamp":"2017-12-14T05:47:36.371Z"}
 {"level":"info","message":"Handling an error","timestamp":"2017-12-14T05:47:36.372Z"}
 {"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T05:47:36.374Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T05:52:23.655Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T05:52:23.678Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T05:52:23.726Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T05:52:23.727Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T05:52:23.731Z"}
+{"level":"info","message":"Processing a GET request to the url /api/restaurants/5a3211973815fc0bf33a99a5","timestamp":"2017-12-14T05:52:23.740Z"}
+{"level":"info","message":"Processing a GET request to the url /api/restaurants/theBadPlace","timestamp":"2017-12-14T05:52:23.748Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T05:52:23.750Z"}
+{"level":"info","message":"Processing a DELETE request to the url /api/restaurants/5a3211973815fc0bf33a99a6","timestamp":"2017-12-14T05:52:23.755Z"}
+{"level":"info","message":"Processing a DELETE request to the url /api/restaurants/notReal","timestamp":"2017-12-14T05:52:23.761Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T05:52:23.762Z"}
+{"level":"info","message":"Processing a PUT request to the url /api/restaurants/5a3211973815fc0bf33a99a7","timestamp":"2017-12-14T05:52:23.766Z"}
+{"level":"info","message":"Processing a PUT request to the url /api/restaurants/notAnID","timestamp":"2017-12-14T05:52:23.776Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T05:52:23.776Z"}
+{"level":"info","message":"Processing a PUT request to the url /api/restaurants/5a3211973815fc0bf33a99a9","timestamp":"2017-12-14T05:52:23.781Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T05:52:23.781Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T05:52:23.784Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T05:52:43.101Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T05:52:43.123Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T05:52:43.167Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T05:52:43.168Z"}
+{"level":"info","message":"Processing a GET request to the url /api/restaurants/5a3211ab29fe8b0bfbd2ef28","timestamp":"2017-12-14T05:52:43.175Z"}
+{"level":"info","message":"Processing a GET request to the url /api/restaurants/theBadPlace","timestamp":"2017-12-14T05:52:43.183Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T05:52:43.185Z"}
+{"level":"info","message":"Processing a DELETE request to the url /api/restaurants/5a3211ab29fe8b0bfbd2ef29","timestamp":"2017-12-14T05:52:43.189Z"}
+{"level":"info","message":"Processing a DELETE request to the url /api/restaurants/notReal","timestamp":"2017-12-14T05:52:43.196Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T05:52:43.196Z"}
+{"level":"info","message":"Processing a PUT request to the url /api/restaurants/5a3211ab29fe8b0bfbd2ef2a","timestamp":"2017-12-14T05:52:43.201Z"}
+{"level":"info","message":"Processing a PUT request to the url /api/restaurants/notAnID","timestamp":"2017-12-14T05:52:43.211Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T05:52:43.215Z"}
+{"level":"info","message":"Processing a PUT request to the url /api/restaurants/5a3211ab29fe8b0bfbd2ef2c","timestamp":"2017-12-14T05:52:43.219Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T05:52:43.220Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T05:52:43.222Z"}

@@ -14,12 +14,12 @@ restaurantRouter.post('/api/restaurants', jsonParser, (request, response, next) 
   }
 
 // console.log(Restaurant.find().where({name: `${request.body.name}`}), `is the matching document`);
-  return Restaurant.find().where({name: `${request.body.name}`})
-    .then(restaurant => {
-      if(restaurant){
-        return next(httpErrors(409), `Sending a 409 status due to duplicate name`);
-      }
-    })
+  // return Restaurant.find().where({name: `${request.body.name}`})
+  //   .then(restaurant => {
+  //     if(restaurant){
+  //       return next(httpErrors(409), `Sending a 409 status due to duplicate name`);
+  //     }
+  //   })
 
   return new Restaurant(request.body).save()
     .then(restaurant => response.json(restaurant))
