@@ -145,5 +145,23 @@ describe(`/api/restaurants`, () => {
           expect(response.status).toEqual(400);
         });
     });
+    test(`PUT should respond with a 409 if a duplicate restaurant name is used`, () => {
+      let mockRestaurant1;
+      let mockRestaurant2;
+      return createFakeRestaurant()
+        .then(restaurant => {
+          mockRestaurant1 = restaurant;
+        })
+      return createFakeRestaurant()
+        .then(restaurant => {
+          mockRestaurant2 = restaurant;
+          return superagent.put(`${apiURL}/${restaurant._id}`)
+            .send({name: mockRestaurant1.name})
+        })
+        .then(Promise.reject)
+        .catch(response => {
+          expect(response.status).toEqual(409);
+        });
+    });
   });
 });
