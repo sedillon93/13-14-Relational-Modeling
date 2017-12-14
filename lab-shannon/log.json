@@ -1407,3 +1407,21 @@
 {"level":"info","message":"Processing a PUT request to the url /api/restaurants/5a32e8de8c7a3b0f677f749b","timestamp":"2017-12-14T21:10:54.787Z"}
 {"level":"info","message":"Handling an error","timestamp":"2017-12-14T21:10:54.787Z"}
 {"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T21:10:54.789Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-14T21:15:58.436Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T21:15:58.460Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T21:15:58.506Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T21:15:58.507Z"}
+{"level":"info","message":"Processing a POST request to the url /api/restaurants","timestamp":"2017-12-14T21:15:58.513Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T21:15:58.516Z"}
+{"level":"info","message":"Processing a GET request to the url /api/restaurants/5a32ea0e61dd580fa0631094","timestamp":"2017-12-14T21:15:58.521Z"}
+{"level":"info","message":"Processing a GET request to the url /api/restaurants/theBadPlace","timestamp":"2017-12-14T21:15:58.530Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T21:15:58.532Z"}
+{"level":"info","message":"Processing a DELETE request to the url /api/restaurants/5a32ea0e61dd580fa0631095","timestamp":"2017-12-14T21:15:58.537Z"}
+{"level":"info","message":"Processing a DELETE request to the url /api/restaurants/notReal","timestamp":"2017-12-14T21:15:58.543Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T21:15:58.544Z"}
+{"level":"info","message":"Processing a PUT request to the url /api/restaurants/5a32ea0e61dd580fa0631096","timestamp":"2017-12-14T21:15:58.548Z"}
+{"level":"info","message":"Processing a PUT request to the url /api/restaurants/notAnID","timestamp":"2017-12-14T21:15:58.558Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T21:15:58.558Z"}
+{"level":"info","message":"Processing a PUT request to the url /api/restaurants/5a32ea0e61dd580fa0631098","timestamp":"2017-12-14T21:15:58.563Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-14T21:15:58.563Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-14T21:15:58.565Z"}

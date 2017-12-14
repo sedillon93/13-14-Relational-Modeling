@@ -50,9 +50,9 @@ describe(`/api/restaurants`, () => {
       let mockRestaurant;
       return createFakeRestaurant()
         .then(restaurant => {
-          mockRestaurant = restaurant
+          mockRestaurant = restaurant;
           return superagent.post(apiURL)
-            .send({name: mockRestaurant.name, cuisine: mockRestaurant.cuisine, city: mockRestaurant.city, rating: mockRestaurant.rating})
+            .send({name: mockRestaurant.name, cuisine: mockRestaurant.cuisine, city: mockRestaurant.city, rating: mockRestaurant.rating});
         })
         .then(Promise.reject)
         .catch(response => {
@@ -93,7 +93,7 @@ describe(`/api/restaurants`, () => {
         .then(response => {
           expect(response.status).toEqual(204);
         })
-        .catch(`Oh noes, there was a problem with your DELETE request.`)
+        .catch(`Oh noes, there was a problem with your DELETE request.`);
     });
     test(`DELETE should respond with a 404 status if no restaurant was found with the id provided`, () => {
       return superagent.delete(`${apiURL}/notReal`)
@@ -118,14 +118,14 @@ describe(`/api/restaurants`, () => {
           expect(response.status).toEqual(200);
           expect(response.body.cuisine).toEqual(`italian`);
         })
-        .catch(`Oh noes, there was a problem with your PUT request.`)
+        .catch(`Oh noes, there was a problem with your PUT request.`);
     });
     test(`PUT should respond with a 404 status if no restaurant is found with the id provided`, () => {
       return createFakeRestaurant()
-        .then(restaurant => {
-        return superagent.put(`${apiURL}/notAnID`)
-          .send({name: 'That Italian place'});
-      })
+        .then(() => {
+          return superagent.put(`${apiURL}/notAnID`)
+            .send({name: 'That Italian place'});
+        })
         .then(Promise.reject)
         .catch(response => {
           expect(response.status).toEqual(404);
@@ -143,7 +143,7 @@ describe(`/api/restaurants`, () => {
         .then(Promise.reject)
         .catch(response => {
           expect(response.status).toEqual(400);
-        })
-    })
+        });
+    });
   });
 });
