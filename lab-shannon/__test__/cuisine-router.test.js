@@ -53,12 +53,27 @@ describe(`/api/cuisines`, () => {
     });
   });
 
-  // describe(`GET requests`, () => {
-  //   test(`GET request should respond with a 200 status and cuisine if there are no errors`, () => {
-  //     let mockCuisine;
-  //
-  //     return superagent.post(apiURL)
-  //         .send()
-  //   });
-  // });
+  describe(`GET requests`, () => {
+    test(`GET request should respond with a 200 status and cuisine if there are no errors`, () => {
+      let mockCuisine;
+
+      return cuisineMock.create()
+        .then(cuisine => {
+          mockCuisine = cuisine;
+          return superagent.get(`${apiURL}/${cuisine._id}`)
+        })
+        .then(response => {
+          expect(response.status).toEqual(200);
+          expect(response.body.cuisineType).toEqual(mockCuisine.cuisineType);
+          expect(response.body._id).toEqual(mockCuisine.id);
+        });
+    });
+    test(`GET request should respond with a 404 status if no cuisine with the specified id is found`, () => {
+      return superagent.get(`${apiURL}/badId`)
+        .then(Promise.reject)
+        .catch(response => {
+          expect(response.status).toEqual(404);
+        });
+    });
+  });
 });
