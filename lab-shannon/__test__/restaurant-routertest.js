@@ -11,18 +11,6 @@ const cuisineMock = require(`./lib/cuisine-mock`);
 
 const apiURL = `http://localhost:${process.env.PORT}/api/restaurants`;
 
-let cuisines = [`indian`, `italian`, `american`, `bangladeshi`, `french`, `thai`, `vietnamese`];
-let cities = [`Seattle`, `Bellevue`, `Redmond`, `Issaquah`, `Sammamish`, `Edmonds`, `Shoreline`];
-
-let createFakeRestaurant = () => {
-  return new Restaurant ({
-    name: faker.lorem.word(2),
-    cuisine: cuisines[faker.random.number(6)],
-    city: cities[faker.random.number(6)],
-    rating: faker.random.number(5),
-  }).save();
-};
-
 describe(`/api/restaurants`, () => {
   beforeAll(server.start);
   afterAll(server.stop);

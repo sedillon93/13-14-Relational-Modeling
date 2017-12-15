@@ -1771,3 +1771,16 @@
 {"level":"info","message":"Processing a DELETE request to the url /api/cuisines/badId","timestamp":"2017-12-15T04:26:02.608Z"}
 {"level":"info","message":"Handling an error","timestamp":"2017-12-15T04:26:02.608Z"}
 {"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-15T04:26:02.611Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-15T18:14:43.843Z"}
+{"level":"info","message":"Processing a POST request to the url /api/cuisines","timestamp":"2017-12-15T18:14:43.868Z"}
+{"level":"info","message":"Processing a POST request to the url /api/cuisines","timestamp":"2017-12-15T18:14:43.933Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-15T18:14:43.934Z"}
+{"level":"info","message":"Processing a POST request to the url /api/cuisines","timestamp":"2017-12-15T18:14:43.944Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-15T18:14:43.949Z"}
+{"level":"info","message":"Processing a GET request to the url /api/cuisines/5a341113a9a25d146806d409","timestamp":"2017-12-15T18:14:43.954Z"}
+{"level":"info","message":"Processing a GET request to the url /api/cuisines/badId","timestamp":"2017-12-15T18:14:43.965Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-15T18:14:43.967Z"}
+{"level":"info","message":"Processing a DELETE request to the url /api/cuisines/5a341113a9a25d146806d40a","timestamp":"2017-12-15T18:14:43.971Z"}
+{"level":"info","message":"Processing a DELETE request to the url /api/cuisines/badId","timestamp":"2017-12-15T18:14:43.978Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-15T18:14:43.979Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-15T18:14:43.982Z"}
