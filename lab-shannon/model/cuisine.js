@@ -8,6 +8,7 @@ const cuisineSchema = mongoose.Schema({
     required: true,
     unique: true,
   },
+  mostUsedSpices: [type: String],
   restaurants: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'restaurant'

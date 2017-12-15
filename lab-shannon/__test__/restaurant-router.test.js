@@ -1,12 +1,13 @@
 'use strict';
 
-process.env.PORT = 3000;
-process.env.MONGODB_URI = `mongodb://localhost/db`;
+require(`./lib/set-up`);
 
 const faker = require(`faker`);
 const superagent = require(`superagent`);
 const server = require(`../lib/server`);
-const Restaurant = require(`../model/restaurant`);
+
+const restaurantMock = require(`./lib/restaurant-mock`);
+const cuisineMock = require(`./lib/cuisine-mock`);
 
 const apiURL = `http://localhost:${process.env.PORT}/api/restaurants`;
 
