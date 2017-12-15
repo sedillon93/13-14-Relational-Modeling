@@ -9,9 +9,9 @@ const restaurantSchema = mongoose.Schema({
     unique: true,
   },
   cuisine: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
     required: true,
-    unique: false,
+    ref: 'cuisine',
   },
   city: {
     type: String,

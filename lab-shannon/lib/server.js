@@ -16,6 +16,7 @@ mongoose.Promise = Promise;
 //----------------------------------------------------------------------------------------
 app.use(require(`./logger-middleware`));
 
+app.use(require(`../route/cuisine-router`));
 app.use(require(`../route/restaurant-router`));
 
 //----------------------------------------------------------------------------------------
