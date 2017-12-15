@@ -3,6 +3,7 @@
 const mongoose = require(`mongoose`);
 const Cuisine = require(`./cuisine`);
 const httpErrors = require(`http-errors`);
+const logger = require(`../lib/logger-middleware`);
 
 const restaurantSchema = mongoose.Schema({
   name: {
@@ -46,7 +47,7 @@ restaurantSchema.post('remove', (document, done) => {
   return Cuisine.findById(document.cuisine)
     .then(cuisineFound => {
       if(!cuisineFound){
-        throw httpErrors(404, `The  cuisine provided does not exist; cannot complete DELETE request for the restaurant`)
+        throw httpErrors(404, `The  cuisine provided does not exist; cannot complete DELETE request for the restaurant`);
       }
 
       cuisineFound.restaurants = cuisineFound.restaurants.filter(restaurant => {

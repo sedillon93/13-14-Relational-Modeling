@@ -15,8 +15,8 @@ restaurantMock.create = () => {
 
       return new Restaurant({
         name: faker.lorem.words(3),
-        cuisine: faker.company.companyName,
-        city: faker.address.city,
+        cuisine: faker.random.number(10000),
+        city: faker.address.city(),
         rating: faker.random.number(5),
       }).save();
     })
@@ -37,8 +37,8 @@ restaurantMock.createMany = (howMany) => {
         .map(() => {
           return new Restaurant({
             name: faker.lorem.words(3),
-            cuisine: faker.company.companyName,
-            city: faker.address.city,
+            cuisine: faker.random.number(100000),
+            city: faker.address.city(),
             rating: faker.random.number(5),
           }).save();
         }));

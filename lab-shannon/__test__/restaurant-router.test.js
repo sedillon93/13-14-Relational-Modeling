@@ -43,11 +43,20 @@ describe(`/api/restaurants`, () => {
           expect(response.status).toEqual(400);
         });
     });
-    test(`POST should respond with a 404 request if the cuisine id is invalid`, () => {
+    test.only(`POST should respond with a 404 request if the cuisine id is invalid`, () => {
       return superagent.post(apiURL)
-        .send({name: faker.lorem.words(2), cuisine: })
+        .send({
+          name: faker.lorem.words(2),
+          cuisine: 398,
+          city: faker.address.city(),
+          rating: faker.random.number(5)
+        })
+        .then(Promise.reject)
+        .catch(response => {
+          expect(response.status).toEqual(404);
+        });
     });
-    test.only(`POST should respond with a 409 status if a duplicate restaurant name is used`, () => {
+    test(`POST should respond with a 409 status if a duplicate restaurant name is used`, () => {
       let mockRestaurant;
       return restaurantMock.create()
         .then(restaurant => {

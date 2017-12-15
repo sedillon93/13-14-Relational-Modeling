@@ -9,7 +9,7 @@ const httpErrors = require(`http-errors`);
 const restaurantRouter = module.exports = new Router();
 
 restaurantRouter.post('/api/restaurants', jsonParser, (request, response, next) => {
-  if(!request.body.name || !request.body.cuisine || !request.body.city){
+  if(!request.body.name || !request.body.city || !request.body.rating){
     return next(httpErrors(400), `Sending a 400 status due to missing information on POST body`);
   }
 
