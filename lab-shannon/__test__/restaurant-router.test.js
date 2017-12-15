@@ -14,16 +14,26 @@ const apiURL = `http://localhost:${process.env.PORT}/api/restaurants`;
 describe(`/api/restaurants`, () => {
   beforeAll(server.start);
   afterAll(server.stop);
-  afterEach(() => Restaurant.remove({}));
+  afterEach(() => restaurantMock.remove({}));
 
   describe(`POST request`, () => {
-    test(`POST request should respond with a 200 status if there were no errors`, () => {
-      return superagent.post(apiURL)
-        .send({name: 'Bukhara', cuisine: 'indian', city: 'Issaquah', rating: 5})
-        .then(response => {
-          expect(response.status).toEqual(200);
-        })
-        .catch(`Oh noes! There was a problem with your POST request`);
+    test.only(`POST request should respond with a 200 status if there were no errors`, () => {
+      let mockCuisine;
+
+      return cuisineMock.create()
+        .then(cuisine => {
+          mockCuisine = cuisine;
+          return superagent.post(apiURL)
+            .send({name: 'Bukhara', cuisine: mockCuisine._id, city: 'Issaquah', rating: 5})
+            .then(response => {
+              expect(response.status).toEqual(200);
+              expect(response.body.city).toEqual('Issaquah');
+              expect(response.body.name).toEqual('Bukhara');
+              expect(response.body.rating).toEqual(5);
+              expect(response.body.cuisine).toEqual(mockCuisine._id.toString());
+            })
+            .catch(`Oh noes! There was a problem with your POST request`);
+        });
     });
     test(`POST request should respond with a 400 status if the body was missing information`, () => {
       return superagent.post(apiURL)

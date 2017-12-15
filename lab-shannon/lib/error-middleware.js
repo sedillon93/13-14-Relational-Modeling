@@ -4,6 +4,7 @@ const logger = require(`./logger`);
 
 module.exports = (error, request, response, next) => {
   logger.log(`info`, `Handling an error`);
+  logger.log(`info`, error);
 
   //------------ HTTP errors ---------------
   if(error.status){
