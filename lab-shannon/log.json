@@ -1689,3 +1689,23 @@
 {"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-15T03:15:08.774Z"}
 {"level":"info","message":"Processing a POST request to the url /api/cuisines","timestamp":"2017-12-15T03:15:08.797Z"}
 {"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-15T03:15:08.847Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-15T03:18:57.880Z"}
+{"level":"info","message":"Processing a POST request to the url /api/cuisines","timestamp":"2017-12-15T03:18:57.903Z"}
+{"level":"info","message":"Processing a POST request to the url /api/cuisines","timestamp":"2017-12-15T03:18:57.948Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-15T03:18:57.949Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-15T03:18:57.953Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-15T03:19:18.532Z"}
+{"level":"info","message":"Processing a POST request to the url /api/cuisines","timestamp":"2017-12-15T03:19:18.555Z"}
+{"level":"info","message":"Processing a POST request to the url /api/cuisines","timestamp":"2017-12-15T03:19:18.599Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-15T03:19:18.600Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-15T03:19:18.603Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-15T03:19:28.525Z"}
+{"level":"info","message":"Processing a POST request to the url /api/cuisines","timestamp":"2017-12-15T03:19:28.548Z"}
+{"level":"info","message":"Processing a POST request to the url /api/cuisines","timestamp":"2017-12-15T03:19:28.593Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-15T03:19:28.594Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-15T03:19:28.597Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-15T03:19:57.950Z"}
+{"level":"info","message":"Processing a POST request to the url /api/cuisines","timestamp":"2017-12-15T03:19:57.973Z"}
+{"level":"info","message":"Processing a POST request to the url /api/cuisines","timestamp":"2017-12-15T03:19:58.019Z"}
+{"level":"info","message":"Handling an error","timestamp":"2017-12-15T03:19:58.020Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-15T03:19:58.023Z"}

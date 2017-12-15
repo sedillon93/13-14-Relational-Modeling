@@ -21,12 +21,21 @@ describe(`/api/cuisines`, () => {
           mostUsedSpices: ['turmeric', 'cumin', 'chilis', 'cinnamon'],
         })
         .then(response => {
-          console.log(response);
           expect(response.status).toEqual(200);
           expect(response.body.cuisineType).toEqual('Bangladeshi');
           expect(response.body.mostUsedSpices).toEqual(['turmeric', 'cumin', 'chilis', 'cinnamon']);
         })
         .catch(error => console.log(error));
+    });
+    test(`POST request should respond with a 400 status if there is a bad request`, () => {
+      return superagent.post(apiURL)
+        .send({
+          mostUsedSpices: ['Cilantro', 'Garlic'],
+        })
+        .then(Promise.reject)
+        .catch(response => {
+          expect(response.status).toEqual(400);
+        });
     });
   });
 });

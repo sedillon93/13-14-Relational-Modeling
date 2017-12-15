@@ -33,8 +33,6 @@ describe(`/api/restaurants`, () => {
       return superagent.post(apiURL)
         .send({name: 'Bukhara', cuisine: 'indian', city: 'Issaquah', rating: 5})
         .then(response => {
-          // console.log(response, `is the 200 POST request`);
-          // console.log(response.status, `is the status`);
           expect(response.status).toEqual(200);
         })
         .catch(`Oh noes! There was a problem with your POST request`);
