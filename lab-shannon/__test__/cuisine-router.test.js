@@ -37,5 +37,28 @@ describe(`/api/cuisines`, () => {
           expect(response.status).toEqual(400);
         });
     });
+    test(`POST request shouold respond with a 409 status if there is a duplicate unique key(cuisineType)`, () => {
+      return cuisineMock.create()
+        .then(cuisine => {
+          return superagent.post(apiURL)
+            .send({
+              cuisineType: cuisine.cuisineType,
+              mostUsedSpices: cuisine.mostUsedSpices
+            });
+        })
+        .then(Promise.reject)
+        .catch(response => {
+          expect(response.status).toEqual(409);
+        });
+    });
   });
+
+  // describe(`GET requests`, () => {
+  //   test(`GET request should respond with a 200 status and cuisine if there are no errors`, () => {
+  //     let mockCuisine;
+  //
+  //     return superagent.post(apiURL)
+  //         .send()
+  //   });
+  // });
 });
