@@ -35,7 +35,7 @@ describe(`/api/restaurants`, () => {
             .catch(`Oh noes! There was a problem with your POST request`);
         });
     });
-    test.only(`POST request should respond with a 400 status if the body was missing information`, () => {
+    test(`POST request should respond with a 400 status if the body was missing information`, () => {
       return superagent.post(apiURL)
         .send({name: `Don't Eat Here`, cuisine: `italian`})
         .then(Promise.reject)
@@ -43,9 +43,13 @@ describe(`/api/restaurants`, () => {
           expect(response.status).toEqual(400);
         });
     });
-    test(`POST should respond with a 409 status if a duplicate restaurant name is used`, () => {
+    test(`POST should respond with a 404 request if the cuisine id is invalid`, () => {
+      return superagent.post(apiURL)
+        .send({name: faker.lorem.words(2), cuisine: })
+    });
+    test.only(`POST should respond with a 409 status if a duplicate restaurant name is used`, () => {
       let mockRestaurant;
-      return createFakeRestaurant()
+      return restaurantMock.create()
         .then(restaurant => {
           mockRestaurant = restaurant;
           return superagent.post(apiURL)
