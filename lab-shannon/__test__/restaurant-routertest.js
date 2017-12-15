@@ -157,7 +157,7 @@ describe(`/api/restaurants`, () => {
         .then(restaurant => {
           mockRestaurant2 = restaurant;
           return superagent.put(`${apiURL}/${restaurant._id}`)
-            .send({name: mockRestaurant1.name})
+            .send({name: mockRestaurant1.name});
         })
         .then(Promise.reject)
         .catch(response => {

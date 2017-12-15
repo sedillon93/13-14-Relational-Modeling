@@ -1,7 +1,7 @@
 'use strict';
 
 const faker = require(`faker`);
-const Cuisine = require(`../model/cuisine`);
+const Cuisine = require(`../../model/cuisine`);
 
 const cuisineMock = module.exports = {};
 

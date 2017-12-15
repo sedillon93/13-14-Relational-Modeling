@@ -1,8 +1,7 @@
-'use strict'
+'use strict';
 
 const {Router} = require(`express`);
-const jsonParser = require(`body-parser`);
-const mongoose = require(`mongoose`);
+const jsonParser = require(`body-parser`).json();
 const httpErrors = require(`http-errors`);
 const Cuisine = require(`../model/cuisine`);
 
@@ -45,7 +44,7 @@ cuisineRouter.get(`/api/cuisines/:id`, (request, response, next) => {
 });
 
 cuisineRouter.delete(`/api/cuisines/:id`, (request, response, next) => {
-  return Cuisinse.findByIdAndRemove(request.params.id)
+  return Cuisine.findByIdAndRemove(request.params.id)
     .then(cuisine => {
       if(!cuisine){
         throw httpErrors(400, `No cuisine found with that id; cannot complete DELETE request`);
