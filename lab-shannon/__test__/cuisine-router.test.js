@@ -43,7 +43,7 @@ describe(`/api/cuisines`, () => {
           return superagent.post(apiURL)
             .send({
               cuisineType: cuisine.cuisineType,
-              mostUsedSpices: cuisine.mostUsedSpices
+              mostUsedSpices: cuisine.mostUsedSpices,
             });
         })
         .then(Promise.reject)
@@ -60,7 +60,7 @@ describe(`/api/cuisines`, () => {
       return cuisineMock.create()
         .then(cuisine => {
           mockCuisine = cuisine;
-          return superagent.get(`${apiURL}/${cuisine._id}`)
+          return superagent.get(`${apiURL}/${cuisine._id}`);
         })
         .then(response => {
           expect(response.status).toEqual(200);
@@ -84,7 +84,7 @@ describe(`/api/cuisines`, () => {
       return cuisineMock.create()
         .then(cuisine => {
           mockCuisine = cuisine;
-          return superagent.delete(`${apiURL}/${mockCuisine._id}`)
+          return superagent.delete(`${apiURL}/${mockCuisine._id}`);
         })
         .then(response => {
           expect(response.status).toEqual(204);
