@@ -76,4 +76,26 @@ describe(`/api/cuisines`, () => {
         });
     });
   });
+
+  describe(`DELETE requests`, () => {
+    test(`DELETE should respond with a 204 status if there are no errors`, () => {
+      let mockCuisine;
+
+      return cuisineMock.create()
+        .then(cuisine => {
+          mockCuisine = cuisine;
+          return superagent.delete(`${apiURL}/${mockCuisine._id}`)
+        })
+        .then(response => {
+          expect(response.status).toEqual(204);
+        });
+    });
+    test(`DELETE should respond with a 404 status if no cuisine is found with the specified id`, () => {
+      return superagent.delete(`${apiURL}/badId`)
+        .then(Promise.reject)
+        .catch(response => {
+          expect(response.status).toEqual(404);
+        });
+    });
+  });
 });
