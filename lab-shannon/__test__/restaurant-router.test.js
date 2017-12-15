@@ -17,30 +17,36 @@ describe(`/api/restaurants`, () => {
   afterEach(() => restaurantMock.remove({}));
 
   describe(`POST request`, () => {
-    test.only(`POST request should respond with a 200 status if there were no errors`, () => {
-      let mockCuisine;
+    test(`POST request should respond with a 200 status if there were no errors`, () => {
+      let tempMockCuisine;
 
       return cuisineMock.create()
         .then(cuisine => {
-          mockCuisine = cuisine;
+          tempMockCuisine = cuisine;
           return superagent.post(apiURL)
-            .send({name: 'Bukhara', cuisine: mockCuisine._id, city: 'Issaquah', rating: 5})
+            .send({name: 'Bukhara', cuisine: tempMockCuisine._id, city: 'Issaquah', rating: 5})
             .then(response => {
               expect(response.status).toEqual(200);
               expect(response.body.city).toEqual('Issaquah');
               expect(response.body.name).toEqual('Bukhara');
               expect(response.body.rating).toEqual(5);
-              expect(response.body.cuisine).toEqual(mockCuisine._id.toString());
+              expect(response.body.cuisine).toEqual(tempMockCuisine._id.toString());
             })
             .catch(`Oh noes! There was a problem with your POST request`);
         });
     });
     test(`POST request should respond with a 400 status if the body was missing information`, () => {
-      return superagent.post(apiURL)
-        .send({name: `Don't Eat Here`, cuisine: `italian`})
-        .then(Promise.reject)
-        .catch(response => {
-          expect(response.status).toEqual(400);
+      let tempMockCuisine;
+
+      return cuisineMock.create()
+        .then(cuisine => {
+          tempMockCuisine = cuisine;
+          return superagent.post(apiURL)
+          .send({name: `Don't Eat Here`, cuisine: `italian`})
+          .then(Promise.reject)
+          .catch(response => {
+            expect(response.status).toEqual(400);
+          });
         });
     });
     test(`POST should respond with a 409 status if a duplicate restaurant name is used`, () => {
