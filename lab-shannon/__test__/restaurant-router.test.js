@@ -43,30 +43,31 @@ describe(`/api/restaurants`, () => {
           expect(response.status).toEqual(400);
         });
     });
-    test.only(`POST should respond with a 404 request if the cuisine id is invalid`, () => {
+    test(`POST should respond with a 404 request if the cuisine id is invalid`, () => {
       return superagent.post(apiURL)
         .send({
           name: faker.lorem.words(2),
           cuisine: 398,
           city: faker.address.city(),
-          rating: faker.random.number(5)
+          rating: faker.random.number(5),
         })
         .then(Promise.reject)
         .catch(response => {
           expect(response.status).toEqual(404);
         });
     });
-    test(`POST should respond with a 409 status if a duplicate restaurant name is used`, () => {
-      let mockRestaurant;
+    test.only(`POST should respond with a 409 status if a duplicate restaurant name is used`, () => {
+      let tempMock;
+
       return restaurantMock.create()
-        .then(restaurant => {
-          mockRestaurant = restaurant;
-          return superagent.post(apiURL)
-            .send({name: mockRestaurant.name, cuisine: mockRestaurant.cuisine, city: mockRestaurant.city, rating: mockRestaurant.rating});
-        })
-        .then(Promise.reject)
-        .catch(response => {
-          expect(response.status).toEqual(409);
+        .then(mock => {
+          tempMock = mock;
+          return superagent.post(`${apiURL}`)
+            .send({name: tempMock.restaurant.name, cuisine: tempMock.cuisine._id, city: 'Redmond', rating: 3})
+            .then(Promise.reject)
+            .catch(response => {
+              expect(response.status).toEqual(409);
+            });
         });
     });
   });

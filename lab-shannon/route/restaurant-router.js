@@ -20,6 +20,7 @@ restaurantRouter.post('/api/restaurants', jsonParser, (request, response, next) 
 
 restaurantRouter.get(`/api/restaurants/:id`, (request, response, next) => {
   return Restaurant.findById(request.params.id)
+    .populate('cuisine')
     .then(restaurant => {
       if(!restaurant){
         throw httpErrors(404, `Sending a 404 status because no restaurant was found with that id`);
