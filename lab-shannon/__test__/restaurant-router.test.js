@@ -131,24 +131,21 @@ describe(`/api/restaurants`, () => {
         })
         .catch(`Oh noes, there was a problem with your PUT request.`);
     });
-    test.only(`PUT should respond with a 404 status if no restaurant is found with the id provided`, () => {
-      return createFakeRestaurant()
-        .then(() => {
-          return superagent.put(`${apiURL}/notAnID`)
-            .send({name: 'That Italian place'});
-        })
+    test(`PUT should respond with a 404 status if no restaurant is found with the id provided`, () => {
+      return superagent.put(`${apiURL}/notAnID`)
+        .send({name: 'That Italian place'})
         .then(Promise.reject)
         .catch(response => {
           expect(response.status).toEqual(404);
         });
     });
     test(`PUT should respond with a 400 status if there is no request body sent`, () => {
-      let restaurantToUpdate = null;
+      let tempMock;
 
-      return createFakeRestaurant()
-        .then(restaurant => {
-          restaurantToUpdate = restaurant;
-          return superagent.put(`${apiURL}/${restaurant._id}`)
+      return restaurantMock.create()
+        .then(mock => {
+          tempMock = mock;
+          return superagent.put(`${apiURL}/${mock.restaurant._id}`)
             .send({});
         })
         .then(Promise.reject)
