@@ -155,16 +155,12 @@ describe(`/api/restaurants`, () => {
         });
     });
     test(`PUT should respond with a 409 if a duplicate restaurant name is used`, () => {
-      let mocks;
-      return restaurantMock.createMany(5)
+      let tempMock;
+      return restaurantMock.createMany(2)
         .then(mock => {
           tempMock = mock;
-        })
-      return createFakeRestaurant()
-        .then(restaurant => {
-          mockRestaurant2 = restaurant;
-          return superagent.put(`${apiURL}/${restaurant._id}`)
-            .send({name: mockRestaurant1.name});
+          return superagent.put(`${apiURL}/${mock.restaurants[0]._id}`)
+            .send({name: tempMock.restaurants[1].name});
         })
         .then(Promise.reject)
         .catch(response => {
