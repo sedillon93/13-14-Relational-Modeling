@@ -116,7 +116,7 @@ describe(`/api/restaurants`, () => {
   });
 
   describe(`PUT request`, () => {
-    test.only(`PUT should respond with 200 status if there were no errors`, () => {
+    test(`PUT should respond with 200 status if there were no errors`, () => {
       let tempMock;
 
       return restaurantMock.create()
@@ -131,7 +131,7 @@ describe(`/api/restaurants`, () => {
         })
         .catch(`Oh noes, there was a problem with your PUT request.`);
     });
-    test(`PUT should respond with a 404 status if no restaurant is found with the id provided`, () => {
+    test.only(`PUT should respond with a 404 status if no restaurant is found with the id provided`, () => {
       return createFakeRestaurant()
         .then(() => {
           return superagent.put(`${apiURL}/notAnID`)
