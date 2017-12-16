@@ -96,7 +96,7 @@ describe(`/api/restaurants`, () => {
   });
 
   describe(`DELETE request`, () => {
-    test.only(`DELETE should respond with a 204 status if there were no errors`, () => {
+    test(`DELETE should respond with a 204 status if there were no errors`, () => {
       return restaurantMock.create()
         .then(mock => {
           return superagent.delete(`${apiURL}/${mock.restaurant.id}`);
@@ -116,18 +116,18 @@ describe(`/api/restaurants`, () => {
   });
 
   describe(`PUT request`, () => {
-    test(`PUT should respond with 200 status if there were no errors`, () => {
-      let restaurantToUpdate = null;
+    test.only(`PUT should respond with 200 status if there were no errors`, () => {
+      let tempMock;
 
-      return createFakeRestaurant()
-        .then(restaurant => {
-          restaurantToUpdate = restaurant;
-          return superagent.put(`${apiURL}/${restaurant._id}`)
-            .send({cuisine: 'italian'});
+      return restaurantMock.create()
+        .then(mock => {
+          tempMock = mock;
+          return superagent.put(`${apiURL}/${tempMock.restaurant._id}`)
+            .send({city: 'Issaquah'});
         })
         .then(response => {
           expect(response.status).toEqual(200);
-          expect(response.body.cuisine).toEqual(`italian`);
+          expect(JSON.stringify(response.body.cuisine)).toEqual(JSON.stringify(tempMock.cuisine._id));
         })
         .catch(`Oh noes, there was a problem with your PUT request.`);
     });
