@@ -73,7 +73,7 @@ describe(`/api/restaurants`, () => {
   });
 
   describe(`GET request`, () => {
-    test.only(`GET should respond with a 200 status if there were no errors`, () => {
+    test(`GET should respond with a 200 status if there were no errors`, () => {
       let tempMock;
 
       return restaurantMock.create()
@@ -96,10 +96,10 @@ describe(`/api/restaurants`, () => {
   });
 
   describe(`DELETE request`, () => {
-    test(`DELETE should respond with a 204 status if there were no errors`, () => {
-      return createFakeRestaurant()
-        .then(restaurant => {
-          return superagent.delete(`${apiURL}/${restaurant.id}`);
+    test.only(`DELETE should respond with a 204 status if there were no errors`, () => {
+      return restaurantMock.create()
+        .then(mock => {
+          return superagent.delete(`${apiURL}/${mock.restaurant.id}`);
         })
         .then(response => {
           expect(response.status).toEqual(204);
