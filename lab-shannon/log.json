@@ -106,3 +106,6 @@
 {"level":"info","message":"Handling an error","timestamp":"2017-12-16T00:16:53.514Z"}
 {"code":11000,"index":0,"errmsg":"E11000 duplicate key error collection: db.restaurants index: name_1 dup key: { : \"mollitia sit molestias\" }","op":{"name":"mollitia sit molestias","cuisine":"5a3465f58a2ec3174b95cc6e","city":"Redmond","rating":3,"_id":"5a3465f58a2ec3174b95cc70","__v":0}}
 {"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-16T00:16:53.529Z"}
+{"level":"info","message":"Turning the server on! Listening on port 3000","timestamp":"2017-12-16T00:19:44.033Z"}
+{"level":"info","message":"Processing a GET request to the url /api/restaurants/5a3466a0169d15176e2c68fa","timestamp":"2017-12-16T00:19:44.090Z"}
+{"level":"info","message":"Turning the server off now. Goodbye.","timestamp":"2017-12-16T00:19:44.113Z"}

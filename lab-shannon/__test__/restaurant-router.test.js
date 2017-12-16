@@ -56,7 +56,7 @@ describe(`/api/restaurants`, () => {
           expect(response.status).toEqual(404);
         });
     });
-    test.only(`POST should respond with a 409 status if a duplicate restaurant name is used`, () => {
+    test(`POST should respond with a 409 status if a duplicate restaurant name is used`, () => {
       let tempMock;
 
       return restaurantMock.create()
@@ -73,13 +73,13 @@ describe(`/api/restaurants`, () => {
   });
 
   describe(`GET request`, () => {
-    test(`GET should respond with a 200 status if there were no errors`, () => {
-      let testRestaurant = null;
+    test.only(`GET should respond with a 200 status if there were no errors`, () => {
+      let tempMock;
 
-      return createFakeRestaurant()
-        .then(restaurant => {
-          testRestaurant = restaurant;
-          return superagent.get(`${apiURL}/${restaurant._id}`);
+      return restaurantMock.create()
+        .then(mock => {
+          tempMock = mock;
+          return superagent.get(`${apiURL}/${tempMock.restaurant._id}`);
         })
         .then(response => {
           expect(response.status).toEqual(200);
