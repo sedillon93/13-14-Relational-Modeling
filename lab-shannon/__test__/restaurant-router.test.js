@@ -53,6 +53,7 @@ describe(`/api/restaurants`, () => {
         })
         .then(Promise.reject)
         .catch(response => {
+          console.log(response.status);
           expect(response.status).toEqual(404);
         });
     });
@@ -154,11 +155,10 @@ describe(`/api/restaurants`, () => {
         });
     });
     test(`PUT should respond with a 409 if a duplicate restaurant name is used`, () => {
-      let mockRestaurant1;
-      let mockRestaurant2;
-      return createFakeRestaurant()
-        .then(restaurant => {
-          mockRestaurant1 = restaurant;
+      let mocks;
+      return restaurantMock.createMany(5)
+        .then(mock => {
+          tempMock = mock;
         })
       return createFakeRestaurant()
         .then(restaurant => {

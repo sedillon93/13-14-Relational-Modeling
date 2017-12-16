@@ -45,7 +45,7 @@ restaurantRouter.put(`/api/restaurants/:id`, jsonParser, (request, response, nex
 // why is this necessary? what do the options accomplish?
   let options = {runValidators: true, new: true};
 
-  if(!request.body.name && !request.body.cuisine && !request.body.city){
+  if(!request.body.name && !request.body.city && !request.body.rating){
     return  next(httpErrors(400), `Sending a 400 status because request must include a body`);
   }
 

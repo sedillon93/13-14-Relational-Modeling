@@ -7,7 +7,7 @@ const cuisineMock = require(`./cuisine-mock`);
 const restaurantMock = module.exports = {};
 
 restaurantMock.create = () => {
-  let mock = {};  //this is NOT the mock Restaurant; this is a general mock which will hold a restaurant with a reference to a specific cuisine which is also stored on the mock. So the mock is here in order to have a relationship between the restaurant and a cuisine.
+  let mock = {};  //this is NOT the mock Restaurant; this is a general mock which will have 2 properties: a cuisine with an id and a restaurant with a reference to the cuisine which is also stored on the mock. So the mock is here in order to have a relationship between the restaurant and a cuisine.
 
   return cuisineMock.create()
     .then(cuisine => {
